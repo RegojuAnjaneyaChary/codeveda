@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGNUP_FORM</title>
+    <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+    <div class="form-container">
+    <h1>SignUp Here</h1>
+    <form onsubmit="sendData(event)">
+        <label for="name">UserName:</label>
+        <input type="text" name="name" id="name">
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email">
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password">
+
+        <button id="submit">Sign Up</button>
+    </form>
+  </div>
+
+    <script>
+        function sendData(e){
+
+            e.preventDefault()
+
+            let name = document.getElementById("name").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let password = document.getElementById("password").value.trim();
+            let newuser={
+                username:name,
+                useremail:email,
+                userpassword:password
+            }
+
+
+            let local =JSON.parse(localStorage.getItem('signup'))||[];
+            local.push(newuser)
+
+            localStorage.setItem("currentuser", JSON.stringify(newuser));
+
+            let localData = localStorage.setItem("signup", JSON.stringify(local));
+            window.location.href = './login.html'
+
+
+        }
+    </script>
+
+
+
+
+
+
+
+
+</body>
+</html>

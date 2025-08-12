@@ -1,0 +1,46 @@
+body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background-color: #f4f4f4;
+    }
+
+    .dashboard {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+
+    .user-info {
+      margin-top: 1rem;
+      font-size: 18px;
+    }
+
+    button {
+      margin-top: 2rem;
+      padding: 10px 20px;
+      font-size: 16px;
+      background: #e53935;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #c62828;
+    }
+
+    @media (max-width: 600px) {
+      .dashboard {
+        padding: 1.5rem;
+      }
+    }
