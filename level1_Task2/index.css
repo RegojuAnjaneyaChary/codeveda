@@ -1,125 +1,118 @@
-/* Import Font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
-:root {
-    --primary: #2575fc;
-    --secondary: #f0f4f8;
-    --text: #333;
-    --white: #fff;
-    --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: var(--secondary);
-    color: var(--text);
+    margin: 0;
+    padding: 0;
     line-height: 1.6;
+    background: #f9fafb;
+    color: #333;
 }
 
 .container {
+    width: 85%;
     max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 20px;
+    margin: auto;
 }
 
 header {
-    background: linear-gradient(135deg, #d0c8d9, #c0c6cf);
-    color: var(--blue);
-    padding: 60px 0;
     text-align: center;
-}
-
-header h1 {
-    font-size: 2.8rem;
-    margin-bottom: 10px;
-}
-
-header p {
-    font-size: 1.2rem;
+    padding: 2rem 0;
+    background: #1f2937;
+    color: white;
 }
 
 .profile-img {
-    width: 140px;
-    height: 140px;
+    width: 130px;
+    height: 130px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 15px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    border: 4px solid #fff;
+    margin-bottom: 1rem;
+    border: 3px solid #fff;
 }
 
 nav {
-    background: var(--white);
-    box-shadow: var(--card-shadow);
-    padding: 15px 0;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    text-align: center;
+    background: #4b5563;
+    padding: 0.8rem 0;
+}
+
+nav .container {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
 }
 
 nav a {
-    margin: 0 20px;
+    color: white;
     text-decoration: none;
-    color: var(--primary);
-    font-weight: 600;
-    transition: color 0.3s;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: #6a11cb;
+    color: #d1d5db;
 }
 
 .section {
-    background-color: var(--white);
-    padding: 40px 30px;
-    margin: 30px 0;
-    border-radius: 12px;
-    box-shadow: var(--card-shadow);
+    margin: 2rem 0;
 }
 
-.section h2 {
+h2 {
+    color: #1f2937;
+    margin-bottom: 1rem;
+}
+
+/* Skills Section */
+.skills-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.skills-list li {
+    background: #f4f4f4;
+    padding: 8px 12px;
+    border-radius: 6px;
     text-align: center;
-    margin-bottom: 25px;
-    font-size: 2rem;
-    color: var(--primary);
+    font-weight: 500;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: background 0.3s ease;
 }
 
+.skills-list li:hover {
+    background: #e0e0e0;
+}
+
+/* Projects */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
 
 .card {
-    background: var(--white);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: var(--card-shadow);
-    transition: transform 0.2s ease;
-}
-
-.card:hover {
-    transform: translateY(-5px);
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .card h3 {
-    color: var(--primary);
-    margin-bottom: 10px;
+    margin-top: 0;
+    color: #111827;
 }
 
-.contact-info {
-    text-align: center;
+.card p {
+    color: #4b5563;
+}
+
+/* Contact */
+.contact-info p {
+    margin: 0.5rem 0;
 }
 
 .contact-info a {
-    color: var(--primary);
+    color: #2563eb;
     text-decoration: none;
 }
 
@@ -127,27 +120,10 @@ nav a:hover {
     text-decoration: underline;
 }
 
+/* Footer */
 footer {
-    background-color: #222;
-    color: var(--white);
     text-align: center;
-    padding: 15px;
-    font-size: 0.9rem;
-    margin-top: 40px;
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 2rem;
-    }
-
-    nav a {
-        display: inline-block;
-        margin: 10px;
-    }
-
-    .section {
-        padding: 30px 15px;
-    }
+    padding: 1rem;
+    background: #1f2937;
+    color: white;
 }
